@@ -66,6 +66,9 @@ switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
     case 'completed':
 		echo 'ok';
         break;
+    case 'workflow_run.completed':
+		echo 'ok';
+        break;
     default:
         header('HTTP/1.0 404 Not Found');
         echo "Event:$_SERVER[HTTP_X_GITHUB_EVENT] Payload:\n";
