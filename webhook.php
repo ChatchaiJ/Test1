@@ -63,8 +63,9 @@ switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
     case 'ping':
         echo 'pong';
         break;
-//    case 'push':
-//        break;
+    case 'completed':
+		echo 'ok';
+        break;
     default:
         header('HTTP/1.0 404 Not Found');
         echo "Event:$_SERVER[HTTP_X_GITHUB_EVENT] Payload:\n";
