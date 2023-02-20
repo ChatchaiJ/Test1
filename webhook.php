@@ -9,7 +9,7 @@
 
 // In this file: /etc/apache2/sites-available/example.com.conf
 // Put this line: SetEnv GITHUB_WEBHOOK_SECRET MY_SECRET
-$hookSecret = getenv('GITHUB_WEBHOOK_SECRET');
+// $hookSecret = getenv('GITHUB_WEBHOOK_SECRET');
 
 set_error_handler(function($severity, $message, $file, $line) {
     throw new \ErrorException($message, 0, $severity, $file, $line);

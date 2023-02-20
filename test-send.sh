@@ -11,6 +11,6 @@ sig=$(	echo -n "${data}" |\
 curl -X POST \
 	-H "Content-Type: application/json" \
 	-H "${sig}" \
-	-H "X-Github-Event: ping" \
+	-H "X-Github-Event: completed" \
 	--data "${data}" \
 	-s $URL
