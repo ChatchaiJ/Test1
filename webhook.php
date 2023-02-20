@@ -60,6 +60,9 @@ switch ($_SERVER['CONTENT_TYPE']) {
 # https://developer.github.com/v3/activity/events/types/
 $payload = json_decode($json);
 switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
+	case 'push':
+		echo 'ok';
+		break;
     case 'ping':
         echo 'pong';
         break;
